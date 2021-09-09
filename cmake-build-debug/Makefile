@@ -129,6 +129,78 @@ ReworkedBankAccount/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/build
 .PHONY : ReworkedBankAccount/fast
 
+BankAccount.o: BankAccount.cpp.o
+.PHONY : BankAccount.o
+
+# target to build an object file
+BankAccount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.o
+.PHONY : BankAccount.cpp.o
+
+BankAccount.i: BankAccount.cpp.i
+.PHONY : BankAccount.i
+
+# target to preprocess a source file
+BankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.i
+.PHONY : BankAccount.cpp.i
+
+BankAccount.s: BankAccount.cpp.s
+.PHONY : BankAccount.s
+
+# target to generate assembly for a file
+BankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.s
+.PHONY : BankAccount.cpp.s
+
+Transaction.o: Transaction.cpp.o
+.PHONY : Transaction.o
+
+# target to build an object file
+Transaction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.o
+.PHONY : Transaction.cpp.o
+
+Transaction.i: Transaction.cpp.i
+.PHONY : Transaction.i
+
+# target to preprocess a source file
+Transaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.i
+.PHONY : Transaction.cpp.i
+
+Transaction.s: Transaction.cpp.s
+.PHONY : Transaction.s
+
+# target to generate assembly for a file
+Transaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.s
+.PHONY : Transaction.cpp.s
+
+User.o: User.cpp.o
+.PHONY : User.o
+
+# target to build an object file
+User.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/User.cpp.o
+.PHONY : User.cpp.o
+
+User.i: User.cpp.i
+.PHONY : User.i
+
+# target to preprocess a source file
+User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/User.cpp.i
+.PHONY : User.cpp.i
+
+User.s: User.cpp.s
+.PHONY : User.s
+
+# target to generate assembly for a file
+User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/User.cpp.s
+.PHONY : User.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ReworkedBankAccount"
+	@echo "... BankAccount.o"
+	@echo "... BankAccount.i"
+	@echo "... BankAccount.s"
+	@echo "... Transaction.o"
+	@echo "... Transaction.i"
+	@echo "... Transaction.s"
+	@echo "... User.o"
+	@echo "... User.i"
+	@echo "... User.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

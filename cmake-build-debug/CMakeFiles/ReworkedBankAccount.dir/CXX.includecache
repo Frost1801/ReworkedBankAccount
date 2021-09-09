@@ -6,7 +6,35 @@
 
 #IncludeRegexTransform: 
 
+/home/sergio/ReworkedBankAccount/BankAccount.h
+vector
+-
+memory
+-
+Transaction.h
+/home/sergio/ReworkedBankAccount/Transaction.h
+
+/home/sergio/ReworkedBankAccount/Transaction.h
+iostream
+-
+ctime
+-
+utility
+-
+fstream
+-
+
+/home/sergio/ReworkedBankAccount/User.h
+BankAccount.h
+/home/sergio/ReworkedBankAccount/BankAccount.h
+
 /home/sergio/ReworkedBankAccount/main.cpp
 iostream
 -
+Transaction.h
+/home/sergio/ReworkedBankAccount/Transaction.h
+BankAccount.h
+/home/sergio/ReworkedBankAccount/BankAccount.h
+User.h
+/home/sergio/ReworkedBankAccount/User.h
 

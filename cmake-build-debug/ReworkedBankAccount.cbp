@@ -82,6 +82,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sergio/ReworkedBankAccount/BankAccount.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/BankAccount.h">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Transaction.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Transaction.h">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/User.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/User.h">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
 		<Unit filename="/home/sergio/ReworkedBankAccount/main.cpp">
 			<Option target="ReworkedBankAccount"/>
 		</Unit>

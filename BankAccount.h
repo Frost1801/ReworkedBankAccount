@@ -16,6 +16,9 @@ public:
 
     const std::vector<std::unique_ptr<Transaction>> &getTransactionHistory() const;
 
+    int getBalance() const;
+
+
 private:
     int balance;
     std:: vector<std:: unique_ptr<Transaction>> transactionHistory;

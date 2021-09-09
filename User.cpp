@@ -9,6 +9,7 @@ User::~User() {
     report << "Name: " << fullName << std:: endl;
     report << "Date of birth: " << dateOfBirth->tm_mday << "/" << dateOfBirth->tm_mon << "/" << dateOfBirth->tm_year << std:: endl;
     report << "Address: " << address;
+   //TODO AGGIUNGI SCORRIMENTO VARI ACCOUNT DELL'USER E INSERIMENTO NEL FILE DEL REPORT DEL BALANCE E DELLA TRANSACTION HISTORY
 }
 
 

@@ -22,6 +22,16 @@ public:
 
     void print () const;
 
+    int getValue() const;
+
+    int getType() const;
+
+    const std::string &getDateAndTime() const;
+
+    const std::string &getCause() const;
+
+    const std::string &getTransactionMaker() const;
+
 private:
     int value;
     int type;

@@ -10,9 +10,9 @@ void BankAccount::deposit(int depositValue, const std::string &profileName, cons
 }
 
 bool BankAccount::withdraw(int withdrawValue, const std::string &profileName, const std::string &cause) {
-    if (this -> balance >= withdrawValue){
-        this -> balance -= withdrawValue;
-        this -> transactionHistory.push_back(std::make_unique<Transaction>(withdrawValue, WITHDRAW, profileName, cause));
+    if (this -> balance >= withdrawValue){ //checks if balance is bigger than withdraw value
+        this -> balance -= withdrawValue; //reduces balance by withdrawValue
+        this -> transactionHistory.push_back(std::make_unique<Transaction>(withdrawValue, WITHDRAW, profileName, cause)); //writes the transaction in the transaction list
         return true;
     }
     else {
@@ -23,4 +23,8 @@ bool BankAccount::withdraw(int withdrawValue, const std::string &profileName, co
 
 const std::vector<std::unique_ptr<Transaction>> &BankAccount::getTransactionHistory() const {
     return transactionHistory;
+}
+
+int BankAccount::getBalance() const {
+    return balance;
 }

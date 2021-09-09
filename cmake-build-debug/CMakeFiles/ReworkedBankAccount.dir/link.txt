@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ReworkedBankAccount.dir/main.cpp.o -o ReworkedBankAccount 

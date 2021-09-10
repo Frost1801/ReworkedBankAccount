@@ -8,7 +8,7 @@ bool Interface::startInterface() {
         int input = 0;
         if (!user){ //checks if the user is already activated or not
             std:: cout << "Welcome, to make transactions you need to create a user profile"<< std:: endl;
-            std:: cout << "Press (1) to create an user profile" << std:: endl ;
+            std:: cout << "Press (1) to create a user profile" << std:: endl ;
             std:: cout << "Press (0) to exit" << std:: endl;
             while (!(getIntInput(input, 2))); //takes an int to evaluate the choice
 
@@ -21,7 +21,7 @@ bool Interface::startInterface() {
                 createProfile();
         }
         if (user -> getAccounts().empty()){ //checks if a bankAccount has already been created or not
-            std:: cout << "To make transactions you need to create a bank account profile"<< std:: endl;
+            std:: cout << "To make transactions you need to create a bank account"<< std:: endl;
             std:: cout << "Press (1) to create an account" << std:: endl ;
             std:: cout << "Press (0) to exit" << std:: endl;
             while (!(getIntInput(input, 2))); //takes an int to evaluate the choice

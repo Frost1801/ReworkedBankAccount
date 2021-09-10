@@ -19,7 +19,7 @@ void User::printTransactionHistory() const { //prints all the transactions of th
 void User::printUserDetails() const { //prints user details to screen
     std:: cout << "DETAILS" << std:: endl;
     std:: cout<< "Name: " << fullName << std:: endl;
-    std:: cout << "Date of birth: " << dateOfBirth->tm_mday << "/" << dateOfBirth->tm_mon << "/" << dateOfBirth->tm_year << std:: endl;
+    std:: cout << "Date of birth: " << dateOfBirth->tm_mday << "/" << dateOfBirth->tm_mon + 1<< "/" << dateOfBirth->tm_year << std:: endl;
     std:: cout << "Address: " << address << std:: endl;
 }
 
@@ -43,7 +43,7 @@ void User::generateReport() const { //generates a report of the user activity on
     for (auto & iter : accounts){
         report << std:: endl;
         report << "ACCOUNT N." << i << " - " << accounts.at(i-1)->getName();
-        report << " - BALANCE: " << accounts.at(getActiveAccount())->getBalance() << "$"<< std:: endl;
+        report << " - BALANCE: " << accounts.at(i - 1)->getBalance() << "$"<< std:: endl;
         for (const auto & it : iter->getTransactionHistory()){
             report << it ->getDateAndTime() << it -> getTransactionMaker();
             if (it-> getType() == DEPOSIT){

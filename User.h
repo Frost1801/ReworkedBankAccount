@@ -27,6 +27,7 @@ public:
 
     void generateReport () const;
     void readReport () const;
+    static void clearFile (const std:: string & fileName);
 
     tm *getDateOfBirth();
 

@@ -80,6 +80,14 @@ void User::readReport() const {
         std::cout << history.rdbuf() << std:: endl;
 }
 
+void User::printAccounts() const {
+    int i = 1;
+    for (const auto & it: accounts){
+        std:: cout << i << ") " << it ->getName() << " - " << it -> getBalance() <<  "$" << std:: endl;
+        i++;
+    }
+}
+
 tm *User::getDateOfBirth() {
     return dateOfBirth;
 }
@@ -92,12 +100,10 @@ int User::getActiveAccount() const {
     return activeAccount;
 }
 
-void User::printAccounts() const {
-    int i = 1;
-    for (const auto & it: accounts){
-        std:: cout << i << ") " << it ->getName() << " - " << it -> getBalance() <<  "$" << std:: endl;
-        i++;
-    }
+void User::clearFile(const std::string &fileName) {
+    std:: ofstream toClear;
+    toClear.open(fileName, std:: fstream::out | std:: fstream::trunc); //trunc deletes any contents that existed in the file before it is open
+    toClear.close();
 }
 
 

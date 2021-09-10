@@ -32,3 +32,8 @@ int BankAccount::getBalance() const {
 const std::string &BankAccount::getName() const {
     return name;
 }
+
+std::vector<std::unique_ptr<Transaction>> &BankAccount::getTransactionHistoryNonConst() {
+    return transactionHistory;
+}
+

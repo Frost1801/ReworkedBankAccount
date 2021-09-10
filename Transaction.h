@@ -20,16 +20,19 @@ public:
         dateAndTime = ctime(&t);
     }
 
+    bool operator == (const Transaction& right){
+        if (value == right.value && type == right.type && cause == right.cause && transactionMaker == right.transactionMaker)
+            return true;
+        else
+            return false;
+    }
+
     void print () const;
 
     int getValue() const;
-
     int getType() const;
-
     const std::string &getDateAndTime() const;
-
     const std::string &getCause() const;
-
     const std::string &getTransactionMaker() const;
 
 private:

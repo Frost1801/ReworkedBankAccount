@@ -65,15 +65,29 @@ CMAKE_BINARY_DIR = /home/sergio/ReworkedBankAccount/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/163/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -84,6 +98,37 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/163/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,6 +173,58 @@ ReworkedBankAccount: cmake_check_build_system
 ReworkedBankAccount/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/build
 .PHONY : ReworkedBankAccount/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googletest/CMakeFiles/gtest.dir/build.make lib/googletest-master/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 BankAccount.o: BankAccount.cpp.o
 .PHONY : BankAccount.o
@@ -249,6 +346,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+testBankAccount.o: testBankAccount.cpp.o
+.PHONY : testBankAccount.o
+
+# target to build an object file
+testBankAccount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o
+.PHONY : testBankAccount.cpp.o
+
+testBankAccount.i: testBankAccount.cpp.i
+.PHONY : testBankAccount.i
+
+# target to preprocess a source file
+testBankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.i
+.PHONY : testBankAccount.cpp.i
+
+testBankAccount.s: testBankAccount.cpp.s
+.PHONY : testBankAccount.s
+
+# target to generate assembly for a file
+testBankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.s
+.PHONY : testBankAccount.cpp.s
+
+testUser.o: testUser.cpp.o
+.PHONY : testUser.o
+
+# target to build an object file
+testUser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o
+.PHONY : testUser.cpp.o
+
+testUser.i: testUser.cpp.i
+.PHONY : testUser.i
+
+# target to preprocess a source file
+testUser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.i
+.PHONY : testUser.cpp.i
+
+testUser.s: testUser.cpp.s
+.PHONY : testUser.s
+
+# target to generate assembly for a file
+testUser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.s
+.PHONY : testUser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -256,8 +401,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ReworkedBankAccount"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... BankAccount.o"
 	@echo "... BankAccount.i"
 	@echo "... BankAccount.s"
@@ -273,6 +426,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... testBankAccount.o"
+	@echo "... testBankAccount.i"
+	@echo "... testBankAccount.s"
+	@echo "... testUser.o"
+	@echo "... testUser.i"
+	@echo "... testUser.s"
 .PHONY : help
 
 

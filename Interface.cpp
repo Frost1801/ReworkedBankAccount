@@ -57,7 +57,7 @@ bool Interface::startInterface() {
                     do{
                         while (!(getIntInput(input)));
                         std:: cout << "Please insert a cause for your operation: "<< std:: endl;
-                        while (!getStringInput(cause)); //keeps asking for a username until a valid one is input
+                        while (!getStringInput(cause)); //keeps asking for a cause until a valid one is input
                     }while (!(user->withdraw(input,cause)));
                     if (input > 0)
                         std:: cout << "Withdrawn " << input << "$" << std:: endl;

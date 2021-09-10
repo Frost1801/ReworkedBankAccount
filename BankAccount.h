@@ -20,6 +20,9 @@ public:
 
     const std::string &getName() const;
 
+    std::vector<std::unique_ptr<Transaction>> &getTransactionHistoryNonConst();
+
+
 private:
     std:: string name;
     int balance;

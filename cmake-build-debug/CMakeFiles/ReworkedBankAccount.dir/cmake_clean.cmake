@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.o"
   "CMakeFiles/ReworkedBankAccount.dir/User.cpp.o"
   "CMakeFiles/ReworkedBankAccount.dir/main.cpp.o"
+  "CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o"
+  "CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o"
   "ReworkedBankAccount"
   "ReworkedBankAccount.pdb"
 )

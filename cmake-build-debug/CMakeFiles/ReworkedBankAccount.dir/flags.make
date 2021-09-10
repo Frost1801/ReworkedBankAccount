@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/sergio/ReworkedBankAccount/lib/googletest-master/googlemock/include -isystem /home/sergio/ReworkedBankAccount/lib/googletest-master/googletest/include -isystem /home/sergio/ReworkedBankAccount/lib/googletest-master/googletest
 
 CXX_FLAGS = -g -std=gnu++2a
 

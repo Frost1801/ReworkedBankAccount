@@ -20,7 +20,7 @@ bool Interface::startInterface() {
             else if (input == 1)
                 createProfile();
         }
-        if (user -> getAccounts().empty()){
+        if (user -> getAccounts().empty()){ //checks if a bankAccount has already been created or not
             std:: cout << "To make transactions you need to create a bank account profile"<< std:: endl;
             std:: cout << "Press (1) to create an account" << std:: endl ;
             std:: cout << "Press (0) to exit" << std:: endl;
@@ -68,7 +68,7 @@ bool Interface::startInterface() {
 
                 break;
             }
-            case 3: { //print balance option
+            case 3: { //prints user details
                 user ->printUserDetails();
                 break;
             }
@@ -76,7 +76,7 @@ bool Interface::startInterface() {
                 user -> printTransactionHistory();
                 break;
             }
-            case 5 : { //print all account details option
+            case 5 : { //allows user to set a different account as active
                 user->printAccounts();
                 std:: cout << "Select the number of the account you want to set active, press (0) to exit" << std:: endl;
                 while (!(getIntInput(input,user -> getAccounts().size() ))); //takes an int to evaluate the choice
@@ -84,7 +84,7 @@ bool Interface::startInterface() {
                     user ->switchAccount(input);
                 break;
             }
-            case 6 : {
+            case 6 : { //allows User to create another bank account
                 createBankAccount();
                 break;
             }
@@ -196,7 +196,7 @@ void Interface::createProfile() {
     user = std::make_unique<User>(inputName,dateOfBirth,address);
 }
 
-bool Interface::isValidDate(tm *toCheck) {
+bool Interface::isValidDate(tm *toCheck) { //checks if a date is valid
         if(1900 <= toCheck->tm_year && toCheck -> tm_year <= 2100)
         {
             int thirtyOneDaysM[7] = {0,2,4,6,7,9,11}; //31 days months

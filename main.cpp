@@ -8,9 +8,11 @@
 
 int main() {
 /*
+
     testing :: InitGoogleTest();
     return RUN_ALL_TESTS();
 */
+
     Interface myInterface;
     while (myInterface.startInterface());
 

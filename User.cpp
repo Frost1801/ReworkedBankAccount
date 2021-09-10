@@ -10,15 +10,13 @@ User::~User() {
 }
 
 
-void User::printTransactionHistory() const {
-    {
+void User::printTransactionHistory() const { //prints all the transactions of the active account
         for (const auto & it : accounts.at(activeAccount)->getTransactionHistory()){
              it->print();
         }
-    }
 }
 
-void User::printUserDetails() const {
+void User::printUserDetails() const { //prints user details to screen
     std:: cout << "DETAILS" << std:: endl;
     std:: cout<< "Name: " << fullName << std:: endl;
     std:: cout << "Date of birth: " << dateOfBirth->tm_mday << "/" << dateOfBirth->tm_mon << "/" << dateOfBirth->tm_year << std:: endl;
@@ -34,9 +32,7 @@ bool User::withdraw(int depositValue, const std::string &cause) {
 }
 
 
-
-
-void User::generateReport() const {
+void User::generateReport() const { //generates a report of the user activity on program shutdown and sends it to a file
     std:: ofstream report ("report.txt");
     report << "DETAILS" << std:: endl;
     report << "Name: " << fullName << std:: endl;
@@ -64,15 +60,15 @@ void User::generateReport() const {
     }
 }
 
-void User::addAccount(const std::string& accountName) {
+void User::addAccount(const std::string& accountName) { //makes it possible to add another account
     accounts.push_back(std::make_unique<BankAccount>(accountName));
 }
 
-void User::switchAccount(int accountNumber) {
+void User::switchAccount(int accountNumber) { //switches active account
     activeAccount = accountNumber - 1;
 }
 
-void User::readReport() const {
+void User::readReport() const { //reads the activity report generated on program shutdown
     std::ifstream history ("report.txt");
     std:: string textLine;
     std:: cout << "USER REPORT:" << std:: endl;
@@ -80,7 +76,7 @@ void User::readReport() const {
         std::cout << history.rdbuf() << std:: endl;
 }
 
-void User::printAccounts() const {
+void User::printAccounts() const { // prints all the accounts to screen
     int i = 1;
     for (const auto & it: accounts){
         std:: cout << i << ") " << it ->getName() << " - " << it -> getBalance() <<  "$" << std:: endl;

@@ -14,26 +14,28 @@ public:
     }
     ~User();
 
+    //basic banking operations
     void deposit (int depositValue, const std::string &cause);
     bool withdraw(int depositValue, const std::string &cause);
+
+    //methods to switch and add bank accounts
     void addAccount (const std:: string& accountName);
     void switchAccount (int accountNumber);
 
-
-
+    //methods to print to screen
     void printTransactionHistory () const;
     void printUserDetails () const;
     void printAccounts() const;
 
+    //methods to read and write from file
     void generateReport () const;
     void readReport () const;
     static void clearFile (const std:: string & fileName);
 
+    //getters
     tm *getDateOfBirth();
-
-    const std::vector<std::unique_ptr<BankAccount>> &getAccounts() const;
-
-    int getActiveAccount() const;
+    [[nodiscard]] const std::vector<std::unique_ptr<BankAccount>> &getAccounts() const;
+    [[nodiscard]] int getActiveAccount() const;
 
 private:
     std:: string fullName;

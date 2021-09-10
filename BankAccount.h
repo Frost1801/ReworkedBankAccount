@@ -10,16 +10,17 @@
 
 class BankAccount {
 public:
+    //constructor
     explicit BankAccount (std:: string name, int startingBalance = 0) : balance (startingBalance), name (std:: move (name)){};
+
+    //basic account operations
     void deposit (int depositValue, const std:: string & profileName, const std:: string &cause);
     bool withdraw (int value, const std:: string & profileName, const std:: string &cause);
 
-    const std::vector<std::unique_ptr<Transaction>> &getTransactionHistory() const;
-
-    int getBalance() const;
-
-    const std::string &getName() const;
-
+    //getters
+    [[nodiscard]] const std::vector<std::unique_ptr<Transaction>> &getTransactionHistory() const;
+    [[nodiscard]] int getBalance() const;
+    [[nodiscard]] const std::string &getName() const;
     std::vector<std::unique_ptr<Transaction>> &getTransactionHistoryNonConst();
 
 

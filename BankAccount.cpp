@@ -28,3 +28,7 @@ const std::vector<std::unique_ptr<Transaction>> &BankAccount::getTransactionHist
 int BankAccount::getBalance() const {
     return balance;
 }
+
+const std::string &BankAccount::getName() const {
+    return name;
+}

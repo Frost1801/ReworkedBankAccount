@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/ReworkedBankAccount.dir/main.cpp.o CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.o CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.o CMakeFiles/ReworkedBankAccount.dir/User.cpp.o -o ReworkedBankAccount 
+/usr/bin/c++ -g CMakeFiles/ReworkedBankAccount.dir/main.cpp.o CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.o CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.o CMakeFiles/ReworkedBankAccount.dir/User.cpp.o CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.o -o ReworkedBankAccount 

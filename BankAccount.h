@@ -10,7 +10,7 @@
 
 class BankAccount {
 public:
-    explicit BankAccount (int startingBalance = 0) : balance (startingBalance){};
+    explicit BankAccount (std:: string name, int startingBalance = 0) : balance (startingBalance), name (std:: move (name)){};
     void deposit (int depositValue, const std:: string & profileName, const std:: string &cause);
     bool withdraw (int value, const std:: string & profileName, const std:: string &cause);
 
@@ -18,8 +18,10 @@ public:
 
     int getBalance() const;
 
+    const std::string &getName() const;
 
 private:
+    std:: string name;
     int balance;
     std:: vector<std:: unique_ptr<Transaction>> transactionHistory;
 };

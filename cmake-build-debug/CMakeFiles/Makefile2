@@ -81,12 +81,12 @@ clean: CMakeFiles/ReworkedBankAccount.dir/clean
 CMakeFiles/ReworkedBankAccount.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target ReworkedBankAccount"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ReworkedBankAccount"
 .PHONY : CMakeFiles/ReworkedBankAccount.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ReworkedBankAccount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ReworkedBankAccount.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ReworkedBankAccount.dir/rule

@@ -88,6 +88,12 @@
 		<Unit filename="/home/sergio/ReworkedBankAccount/BankAccount.h">
 			<Option target="ReworkedBankAccount"/>
 		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Interface.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Interface.h">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
 		<Unit filename="/home/sergio/ReworkedBankAccount/Transaction.cpp">
 			<Option target="ReworkedBankAccount"/>
 		</Unit>

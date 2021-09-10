@@ -153,6 +153,30 @@ BankAccount.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.s
 .PHONY : BankAccount.cpp.s
 
+Interface.o: Interface.cpp.o
+.PHONY : Interface.o
+
+# target to build an object file
+Interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.o
+.PHONY : Interface.cpp.o
+
+Interface.i: Interface.cpp.i
+.PHONY : Interface.i
+
+# target to preprocess a source file
+Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.i
+.PHONY : Interface.cpp.i
+
+Interface.s: Interface.cpp.s
+.PHONY : Interface.s
+
+# target to generate assembly for a file
+Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.s
+.PHONY : Interface.cpp.s
+
 Transaction.o: Transaction.cpp.o
 .PHONY : Transaction.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... BankAccount.o"
 	@echo "... BankAccount.i"
 	@echo "... BankAccount.s"
+	@echo "... Interface.o"
+	@echo "... Interface.i"
+	@echo "... Interface.s"
 	@echo "... Transaction.o"
 	@echo "... Transaction.i"
 	@echo "... Transaction.s"

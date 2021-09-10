@@ -46,7 +46,7 @@ void User::generateReport() const {
     int i = 1;
     for (auto & iter : accounts){
         report << std:: endl;
-        report << "ACCOUNT N." << i << " - " << accounts.at(getActiveAccount())->getName();
+        report << "ACCOUNT N." << i << " - " << accounts.at(i-1)->getName();
         report << " - BALANCE: " << accounts.at(getActiveAccount())->getBalance() << "$"<< std:: endl;
         for (const auto & it : iter->getTransactionHistory()){
             report << it ->getDateAndTime() << it -> getTransactionMaker();

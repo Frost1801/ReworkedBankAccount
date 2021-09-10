@@ -80,7 +80,8 @@ bool Interface::startInterface() {
                 user->printAccounts();
                 std:: cout << "Select the number of the account you want to set active, press (0) to exit" << std:: endl;
                 while (!(getIntInput(input,user -> getAccounts().size() ))); //takes an int to evaluate the choice
-                user ->switchAccount(input);
+                if (input != 0)
+                    user ->switchAccount(input);
                 break;
             }
             case 6 : {
@@ -167,14 +168,17 @@ void Interface ::createBankAccount() {
 
 
 void Interface::createProfile() {
-    std:: cout << "Please enter your name: "<< std:: endl;
+    std:: cout << "Please enter your full name: "<< std:: endl;
     std:: string inputName;
     while (!getStringInput(inputName, 5, 60)); //keeps asking for a username until a valid one is input
-    std:: cout << "Please enter your address: "<< std:: endl;
+    std:: cout << "Please enter your home address: "<< std:: endl;
     std:: string address;
     while (!getStringInput(address, 5, 60)); //keeps asking for a username until a valid one is input
     tm * dateOfBirth = new tm;
+    int counter = 0;
     do {
+        if (counter != 0)
+            std:: cout << "Invalid Date, please try again" << std:: endl;
         int day;
         std:: cout << "Please enter your day of birth (number)" << std:: endl;
         while (!(getIntInput(day, 31))); //takes an int to evaluate the choice
@@ -187,6 +191,7 @@ void Interface::createProfile() {
         dateOfBirth->tm_mday = day;
         dateOfBirth -> tm_mon = month -1;
         dateOfBirth -> tm_year = year;
+        counter ++;
     }while (!isValidDate(dateOfBirth));
     user = std::make_unique<User>(inputName,dateOfBirth,address);
 }

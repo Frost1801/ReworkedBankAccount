@@ -14,7 +14,7 @@ Il programma è composto da 4 classi principali:
 
 **User:** Rappresenta un utente del servizio bancario con i propri dati (nome, data di nascita, indirizzo e lista degli account bancari che possiede). L'user ha la possibilità di gestire i propri account depositando e ritirando denaro e di visualizzare le transazioni effettuate. Al termine dell'utilizzo del servizio le operazioni effettuate dell'utente sono salvate in un file di testo insieme ai suoi dettagli anagrafici in un report generato automaticamente dal programma e che viene mostrato all'utente. 
 
-**Interface:** Si occupa di rendere l'accesso alle operazioni più facile tramite una interfaccia naviabile utilizzando input della tastiera. 
+**Interface:** Si occupa di rendere l'accesso alle operazioni più facile tramite una interfaccia navigabile utilizzando input della tastiera. 
 
 
 

@@ -16,7 +16,7 @@ bool BankAccount::withdraw(int withdrawValue, const std::string &profileName, co
         return true;
     }
     else {
-        std::cout << "Error, exceeding account balance (" <<  this -> balance << "$)"<< std:: endl;
+        std::cout << "Error, exceeding account balance (" <<  this -> balance << "$), please input a valid amount"<< std:: endl;
         return false;
     }
 }

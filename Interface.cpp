@@ -58,12 +58,14 @@ bool Interface::startInterface() {
                         while (!(getIntInput(input)));
                         std:: cout << "Please insert a cause for your operation: "<< std:: endl;
                         while (!getStringInput(cause)); //keeps asking for a cause until a valid one is input
+                        if (input == 0)
+                            break;
                     }while (!(user->withdraw(input,cause)));
                     if (input > 0)
                         std:: cout << "Withdrawn " << input << "$" << std:: endl;
                 }
                 else {
-                    std:: cout << "You haven't deposited any money yet!" << std:: endl;
+                    std:: cout << "Your balance is 0!" << std:: endl;
                 }
 
                 break;

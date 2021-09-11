@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/sergio/ReworkedBankAccount/BankAccount.cpp
+BankAccount.h
+/home/sergio/ReworkedBankAccount/BankAccount.h
+
 /home/sergio/ReworkedBankAccount/BankAccount.h
 vector
 -
@@ -31,10 +35,6 @@ utility
 -
 fstream
 -
-
-/home/sergio/ReworkedBankAccount/User.cpp
-User.h
-/home/sergio/ReworkedBankAccount/User.h
 
 /home/sergio/ReworkedBankAccount/User.h
 BankAccount.h

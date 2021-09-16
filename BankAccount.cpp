@@ -9,6 +9,7 @@ void BankAccount::deposit(int depositValue, const std::string &profileName, cons
     this ->transactionHistory.push_back(std::make_unique<Transaction>(depositValue,DEPOSIT, profileName, cause)); //pushes the transaction to history vector
 }
 
+//FIXME INVECE DI STAMPARE UN COUT LANCIA UNA ECCEZIONE E CHE VIENE GESTITA
 bool BankAccount::withdraw(int withdrawValue, const std::string &profileName, const std::string &cause) {
     if (this -> balance >= withdrawValue){ //checks if balance is bigger than withdraw value
         this -> balance -= withdrawValue; //reduces balance by withdrawValue

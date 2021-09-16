@@ -18,6 +18,7 @@ public:
     bool withdraw (int value, const std:: string & profileName, const std:: string &cause);
 
     //getters
+    //TODO AGGIUNGI POSSIBILITÀ DI STAMPARE SOLO DI UN TIPO (DEPOSIT O WITHDRAW) OPPURE IN BASE AD UNA CERTA DATA
     [[nodiscard]] const std::vector<std::unique_ptr<Transaction>> &getTransactionHistory() const;
     [[nodiscard]] int getBalance() const;
     [[nodiscard]] const std::string &getName() const;

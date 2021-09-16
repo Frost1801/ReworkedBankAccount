@@ -15,6 +15,7 @@ const int WITHDRAW = 2;
 class Transaction {
 public:
     //constructor
+    //FIXME aggiungi la possibilità di mettere il tempo in input
     Transaction (int value, int type , std:: string transactionMaker, std:: string cause) :
     value(value), cause (std::move(cause)), transactionMaker(std::move(transactionMaker)), type (type){
         std::time_t t = std::time(nullptr);   // gets time of now

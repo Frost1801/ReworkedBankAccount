@@ -175,7 +175,7 @@ void Interface::createProfile() {
     while (!getStringInput(inputName, 5, 60)); //keeps asking for a username until a valid one is input
     std:: cout << "Please enter your home address: "<< std:: endl;
     std:: string address;
-    while (!getStringInput(address, 5, 60)); //keeps asking for a username until a valid one is input
+    while (!getStringInput(address, 5, 60)); //keeps asking for an address until a valid one is input
     tm * dateOfBirth = new tm;
     int counter = 0;
     do {
@@ -208,14 +208,14 @@ bool Interface::isValidDate(tm *toCheck) { //checks if a date is valid
                         return true;
                 }
             }
-            int thirtyDaysM[4] = {3,5,8,10};
+            int thirtyDaysM[4] = {3,5,8,10}; //thirty days months
             for (int i : thirtyDaysM){
                 if (toCheck->tm_mon == i){
                     if (toCheck -> tm_mday > 0 && toCheck -> tm_mday <=30)
                         return true;
                 }
             }
-            if(toCheck -> tm_mon ==1)
+            if(toCheck -> tm_mon ==1) //february
             {
                 if((toCheck-> tm_year%400==0 || (toCheck-> tm_year%100!=0 && toCheck-> tm_year%4==0)) && toCheck-> tm_mday>0 && toCheck-> tm_mday<=29)
                     return true;

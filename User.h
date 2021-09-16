@@ -22,6 +22,8 @@ public:
     void addAccount (const std:: string& accountName);
     void switchAccount (int accountNumber);
 
+    //TODO POTER MODIFICARE LE TRANSAZIONI (CANCELLARLE E TRASFERIRE SU UN ALTRO CONTO)
+
     //methods to print to screen
     void printTransactionHistory () const;
     void printUserDetails () const;

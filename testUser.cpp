@@ -34,5 +34,6 @@ TEST_F(TesterUser, addAccountTest){
     tested ->addAccount("addedAccount");
     ASSERT_EQ (tested-> getAccounts().size(), 1);
 }
-
+//TODO ATTRAVERSO UN UTENTE POSSIAMO TRASFERIRE SOLDI DA UN CONTO AD UN ALTRO
+//TODO AGGIUNGI LE FUNZIONI PER IL TEST SU QUESTE NUOVE FUNZIONALITÀ
 

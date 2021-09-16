@@ -34,7 +34,7 @@ bool Interface::startInterface() {
             else if (input == 1)
                 createBankAccount();
         }
-        printTextOptions();
+        printTextOptions();//options available to the user
         while (!(getIntInput(input, 6))); //gets input
         switch (input){
             case 1 : { //deposit option

@@ -52,6 +52,7 @@ TEST_F (TesterBankAccount, withdrawReturnFalse){ //checks return value in the ca
 TEST_F (TesterBankAccount, transactionHistoryTest){
     tested->getTransactionHistoryNonConst().clear();
     tested ->deposit(100, "test", "test cause");
+    //creates a transaction that shall be equal to the one in the first slot of the vector
     Transaction mustBeEqual (100,DEPOSIT, "test", "test cause");
     bool status;
     if (mustBeEqual == *(tested-> getTransactionHistory().at(0)))

@@ -9,7 +9,6 @@ User::~User() {
     delete dateOfBirth;
 }
 
-
 void User::printTransactionHistory() const { //prints all the transactions of the active account
         for (const auto & it : accounts.at(activeAccount)->getTransactionHistory()){
              it->print();
@@ -30,7 +29,6 @@ void User::deposit(int depositValue, const std::string &cause) {
 bool User::withdraw(int depositValue, const std::string &cause) {
     return this -> accounts.at(activeAccount)->withdraw(depositValue,this ->fullName,cause);
 }
-
 
 void User::generateReport() const { //generates a report of the user activity on program shutdown and sends it to a file
     std:: ofstream report ("report.txt");

@@ -23,11 +23,10 @@ public:
     [[nodiscard]] const std::string &getName() const;
     std::vector<std::unique_ptr<Transaction>> &getTransactionHistoryNonConst();
 
-
 private:
-    std:: string name;
-    int balance;
-    std:: vector<std:: unique_ptr<Transaction>> transactionHistory;
+    std:: string name; //BankAccount name
+    int balance; //balance of the account
+    std:: vector<std:: unique_ptr<Transaction>> transactionHistory; //transactions that happened in the account
 };
 
 

@@ -16,13 +16,19 @@ public:
     //basic account operations
     void deposit (int depositValue, const std:: string & profileName, const std:: string &cause);
     bool withdraw (int value, const std:: string & profileName, const std:: string &cause);
+    void addTransaction (const Transaction& toAdd);
+    Transaction removeTransaction(int index);
 
     //getters
-    //TODO AGGIUNGI POSSIBILITÀ DI STAMPARE SOLO DI UN TIPO (DEPOSIT O WITHDRAW) OPPURE IN BASE AD UNA CERTA DATA
-    [[nodiscard]] const std::vector<std::unique_ptr<Transaction>> &getTransactionHistory() const;
+    [[nodiscard]] std:: vector <Transaction> getDepositTransactions () const;
+    [[nodiscard]] std:: vector <Transaction> getWithdrawTransactions () const;
+    [[nodiscard]] std:: vector <Transaction> getOfDateTransactions (std:: tm * dateAndTime) const;
+
+
+
     [[nodiscard]] int getBalance() const;
     [[nodiscard]] const std::string &getName() const;
-    std::vector<std::unique_ptr<Transaction>> &getTransactionHistoryNonConst();
+
 
 private:
     std:: string name; //BankAccount name

@@ -10,11 +10,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sergio/ReworkedBankAccount/BankAccount.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.o"
   "/home/sergio/ReworkedBankAccount/Interface.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.o"
+  "/home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o"
+  "/home/sergio/ReworkedBankAccount/Tests/testTransaction.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o"
+  "/home/sergio/ReworkedBankAccount/Tests/testUser.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o"
   "/home/sergio/ReworkedBankAccount/Transaction.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.o"
   "/home/sergio/ReworkedBankAccount/User.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/User.cpp.o"
   "/home/sergio/ReworkedBankAccount/main.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/main.cpp.o"
-  "/home/sergio/ReworkedBankAccount/testBankAccount.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o"
-  "/home/sergio/ReworkedBankAccount/testUser.cpp" "/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

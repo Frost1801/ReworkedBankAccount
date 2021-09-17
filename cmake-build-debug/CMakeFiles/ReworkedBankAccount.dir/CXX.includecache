@@ -548,9 +548,21 @@ Interface.h
 User.h
 /home/sergio/ReworkedBankAccount/User.h
 
-/home/sergio/ReworkedBankAccount/Transaction.cpp
-Transaction.h
-/home/sergio/ReworkedBankAccount/Transaction.h
+/home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp
+gtest/gtest.h
+-
+gmock/gmock.h
+-
+../BankAccount.h
+/home/sergio/ReworkedBankAccount/BankAccount.h
+
+/home/sergio/ReworkedBankAccount/Tests/testUser.cpp
+gtest/gtest.h
+-
+gmock/gmock.h
+-
+../User.h
+/home/sergio/ReworkedBankAccount/User.h
 
 /home/sergio/ReworkedBankAccount/Transaction.h
 iostream
@@ -585,20 +597,4 @@ User.h
 /home/sergio/ReworkedBankAccount/User.h
 Interface.h
 /home/sergio/ReworkedBankAccount/Interface.h
-
-/home/sergio/ReworkedBankAccount/testBankAccount.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-BankAccount.h
-/home/sergio/ReworkedBankAccount/BankAccount.h
-
-/home/sergio/ReworkedBankAccount/testUser.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-User.h
-/home/sergio/ReworkedBankAccount/User.h
 

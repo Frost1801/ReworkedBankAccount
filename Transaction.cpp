@@ -4,18 +4,6 @@
 
 #include "Transaction.h"
 
-void Transaction::print() const { //prints transaction details
-    std:: cout << dateAndTime << transactionMaker;
-    if (type == DEPOSIT){
-        std:: cout << " Deposited ";
-    }
-    else if (type == WITHDRAW){
-        std:: cout << " Withdrawn ";
-    }
-    std:: cout << value << "$" << std:: endl;
-    std:: cout << "CAUSE: "<< cause << std:: endl;
-}
-
 int Transaction::getValue() const {
     return value;
 }
@@ -24,14 +12,26 @@ int Transaction::getType() const {
     return type;
 }
 
-const std::string &Transaction::getDateAndTime() const {
-    return dateAndTime;
-}
-
 const std::string &Transaction::getCause() const {
     return cause;
 }
 
 const std::string &Transaction::getTransactionMaker() const {
     return transactionMaker;
+}
+
+void Transaction::setDateAndTime(std::tm *toSet) {
+    dateAndTime = toSet;
+}
+
+std:: tm *Transaction::getDateAndTime() const {
+    return dateAndTime;
+}
+
+bool Transaction::areEqualDates(std:: tm * a, std :: tm * b) {
+        if (a->tm_year == b->tm_year && a->tm_mon == b->tm_mon && a-> tm_mday == b-> tm_mday
+            && a-> tm_hour == b-> tm_hour && a-> tm_min == b-> tm_min && a -> tm_sec == b-> tm_sec)
+            return true;
+        else
+            return false;
 }

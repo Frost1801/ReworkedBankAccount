@@ -274,6 +274,78 @@ Interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.s
 .PHONY : Interface.cpp.s
 
+Tests/testBankAccount.o: Tests/testBankAccount.cpp.o
+.PHONY : Tests/testBankAccount.o
+
+# target to build an object file
+Tests/testBankAccount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o
+.PHONY : Tests/testBankAccount.cpp.o
+
+Tests/testBankAccount.i: Tests/testBankAccount.cpp.i
+.PHONY : Tests/testBankAccount.i
+
+# target to preprocess a source file
+Tests/testBankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.i
+.PHONY : Tests/testBankAccount.cpp.i
+
+Tests/testBankAccount.s: Tests/testBankAccount.cpp.s
+.PHONY : Tests/testBankAccount.s
+
+# target to generate assembly for a file
+Tests/testBankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.s
+.PHONY : Tests/testBankAccount.cpp.s
+
+Tests/testTransaction.o: Tests/testTransaction.cpp.o
+.PHONY : Tests/testTransaction.o
+
+# target to build an object file
+Tests/testTransaction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o
+.PHONY : Tests/testTransaction.cpp.o
+
+Tests/testTransaction.i: Tests/testTransaction.cpp.i
+.PHONY : Tests/testTransaction.i
+
+# target to preprocess a source file
+Tests/testTransaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.i
+.PHONY : Tests/testTransaction.cpp.i
+
+Tests/testTransaction.s: Tests/testTransaction.cpp.s
+.PHONY : Tests/testTransaction.s
+
+# target to generate assembly for a file
+Tests/testTransaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.s
+.PHONY : Tests/testTransaction.cpp.s
+
+Tests/testUser.o: Tests/testUser.cpp.o
+.PHONY : Tests/testUser.o
+
+# target to build an object file
+Tests/testUser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o
+.PHONY : Tests/testUser.cpp.o
+
+Tests/testUser.i: Tests/testUser.cpp.i
+.PHONY : Tests/testUser.i
+
+# target to preprocess a source file
+Tests/testUser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.i
+.PHONY : Tests/testUser.cpp.i
+
+Tests/testUser.s: Tests/testUser.cpp.s
+.PHONY : Tests/testUser.s
+
+# target to generate assembly for a file
+Tests/testUser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.s
+.PHONY : Tests/testUser.cpp.s
+
 Transaction.o: Transaction.cpp.o
 .PHONY : Transaction.o
 
@@ -346,54 +418,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-testBankAccount.o: testBankAccount.cpp.o
-.PHONY : testBankAccount.o
-
-# target to build an object file
-testBankAccount.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o
-.PHONY : testBankAccount.cpp.o
-
-testBankAccount.i: testBankAccount.cpp.i
-.PHONY : testBankAccount.i
-
-# target to preprocess a source file
-testBankAccount.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.i
-.PHONY : testBankAccount.cpp.i
-
-testBankAccount.s: testBankAccount.cpp.s
-.PHONY : testBankAccount.s
-
-# target to generate assembly for a file
-testBankAccount.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.s
-.PHONY : testBankAccount.cpp.s
-
-testUser.o: testUser.cpp.o
-.PHONY : testUser.o
-
-# target to build an object file
-testUser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o
-.PHONY : testUser.cpp.o
-
-testUser.i: testUser.cpp.i
-.PHONY : testUser.i
-
-# target to preprocess a source file
-testUser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.i
-.PHONY : testUser.cpp.i
-
-testUser.s: testUser.cpp.s
-.PHONY : testUser.s
-
-# target to generate assembly for a file
-testUser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReworkedBankAccount.dir/build.make CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.s
-.PHONY : testUser.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -417,6 +441,15 @@ help:
 	@echo "... Interface.o"
 	@echo "... Interface.i"
 	@echo "... Interface.s"
+	@echo "... Tests/testBankAccount.o"
+	@echo "... Tests/testBankAccount.i"
+	@echo "... Tests/testBankAccount.s"
+	@echo "... Tests/testTransaction.o"
+	@echo "... Tests/testTransaction.i"
+	@echo "... Tests/testTransaction.s"
+	@echo "... Tests/testUser.o"
+	@echo "... Tests/testUser.i"
+	@echo "... Tests/testUser.s"
 	@echo "... Transaction.o"
 	@echo "... Transaction.i"
 	@echo "... Transaction.s"
@@ -426,12 +459,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... testBankAccount.o"
-	@echo "... testBankAccount.i"
-	@echo "... testBankAccount.s"
-	@echo "... testUser.o"
-	@echo "... testUser.i"
-	@echo "... testUser.s"
 .PHONY : help
 
 

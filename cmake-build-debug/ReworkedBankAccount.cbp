@@ -340,6 +340,15 @@
 		<Unit filename="/home/sergio/ReworkedBankAccount/Interface.h">
 			<Option target="ReworkedBankAccount"/>
 		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Tests/testTransaction.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
+		<Unit filename="/home/sergio/ReworkedBankAccount/Tests/testUser.cpp">
+			<Option target="ReworkedBankAccount"/>
+		</Unit>
 		<Unit filename="/home/sergio/ReworkedBankAccount/Transaction.cpp">
 			<Option target="ReworkedBankAccount"/>
 		</Unit>
@@ -365,12 +374,6 @@
 			<Option target="gtest_main"/>
 		</Unit>
 		<Unit filename="/home/sergio/ReworkedBankAccount/main.cpp">
-			<Option target="ReworkedBankAccount"/>
-		</Unit>
-		<Unit filename="/home/sergio/ReworkedBankAccount/testBankAccount.cpp">
-			<Option target="ReworkedBankAccount"/>
-		</Unit>
-		<Unit filename="/home/sergio/ReworkedBankAccount/testUser.cpp">
 			<Option target="ReworkedBankAccount"/>
 		</Unit>
 		<Unit filename="/home/sergio/ReworkedBankAccount/CMakeLists.txt">

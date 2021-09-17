@@ -17,15 +17,23 @@ public:
     //basic banking operations
     void deposit (int depositValue, const std::string &cause);
     bool withdraw(int depositValue, const std::string &cause);
+    bool transfer (int dest, int value, const std:: string & cause);
+    bool moveTransaction(int transactionIndex, int accountIndex);
+    void addTransaction (const Transaction &toAdd);
+    bool removeTransaction (int index);
+
 
     //methods to switch and add bank accounts
     void addAccount (const std:: string& accountName);
     void switchAccount (int accountNumber);
 
-    //TODO POTER MODIFICARE LE TRANSAZIONI (CANCELLARLE E TRASFERIRE SU UN ALTRO CONTO)
 
     //methods to print to screen
-    void printTransactionHistory () const;
+    void printDepositHistory() const;
+    void printWithdrawHistory() const;
+    void printTransactionOfDate (std:: tm *dateOfTransaction) const;
+    void printIndividualTransaction(const Transaction &it) const ;
+
     void printUserDetails () const;
     void printAccounts() const;
 

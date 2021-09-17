@@ -75,7 +75,11 @@ bool Interface::startInterface() {
                 break;
             }
             case 4: { //print all account history option
-                user -> printTransactionHistory();
+                std:: cout << "WITHDRAWS:" << std:: endl;
+                user->printWithdrawHistory();
+                std:: cout << "DEPOSITS:" << std:: endl;
+                user-> printDepositHistory();
+                std:: cout << std:: endl;
                 break;
             }
             case 5 : { //allows user to set a different account as active
@@ -92,7 +96,6 @@ bool Interface::startInterface() {
             }
             case 0 : { // quits the program
                 std:: cout << "Quitting..." << std:: endl;
-
                 return false;
             }
             default : {

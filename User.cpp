@@ -9,10 +9,40 @@ User::~User() {
     delete dateOfBirth;
 }
 
-void User::printTransactionHistory() const { //prints all the transactions of the active account
-        for (const auto & it : accounts.at(activeAccount)->getTransactionHistory()){
-             it->print();
-        }
+void User::printIndividualTransaction(const Transaction &it) const {
+    std:: cout << std:: asctime (it .getDateAndTime())  << it . getTransactionMaker();
+    if (it.getType() == DEPOSIT){
+        std:: cout << " Deposited ";
+    }
+    else if (it.getType() == WITHDRAW){
+        std:: cout << " Withdrawn ";
+    }
+    std:: cout << it . getValue() << "$" << std:: endl;
+    std:: cout << "CAUSE: "<< it . getCause() << std:: endl;
+}
+
+void User::printDepositHistory() const { //prints all the transactions of the active account
+    for (const auto & it : accounts){
+        std:: vector<Transaction> deposits = it -> getDepositTransactions ();
+        for (const auto & iter : deposits)
+            printIndividualTransaction((iter));
+    }
+}
+
+void User::printWithdrawHistory() const { //prints all the transactions of the active account
+    for (const auto & it : accounts){
+        std:: vector<Transaction> deposits = it -> getWithdrawTransactions();
+        for (const auto & iter : deposits)
+            printIndividualTransaction((iter));
+    }
+}
+
+void User::printTransactionOfDate(std::tm *dateOfTransaction) const {
+    for (const auto & it : accounts){
+        std:: vector<Transaction> deposits = it -> getOfDateTransactions(dateOfTransaction);
+        for (const auto & iter : deposits)
+            printIndividualTransaction((iter));
+    }
 }
 
 void User::printUserDetails() const { //prints user details to screen
@@ -27,8 +57,29 @@ void User::deposit(int depositValue, const std::string &cause) {
 }
 
 bool User::withdraw(int depositValue, const std::string &cause) {
-    return this -> accounts.at(activeAccount)->withdraw(depositValue,this ->fullName,cause);
+    try{
+        this -> accounts.at(activeAccount)->withdraw(depositValue,this ->fullName,cause);
+    }
+    catch (std:: runtime_error & e){
+        std :: cout << e.what() << std:: endl;
+        return false;
+    }
+    return true;
 }
+
+bool User::transfer(int dest, int value, const std::string &cause) {
+    try{
+        this -> accounts.at(activeAccount)->withdraw(value,this ->fullName,cause);
+    }
+    catch (std:: runtime_error & e){
+        std :: cout << e.what() << std:: endl;
+        return false;
+    }
+    this -> accounts.at(dest - 1)->deposit(value,this ->fullName,cause);
+    return true;
+}
+
+
 
 void User::generateReport() const { //generates a report of the user activity on program shutdown and sends it to a file
     std:: ofstream report ("report.txt");
@@ -42,18 +93,20 @@ void User::generateReport() const { //generates a report of the user activity on
         report << std:: endl;
         report << "ACCOUNT N." << i << " - " << accounts.at(i-1)->getName();
         report << " - BALANCE: " << accounts.at(i - 1)->getBalance() << "$"<< std:: endl;
-        for (const auto & it : iter->getTransactionHistory()){
-            report << it ->getDateAndTime() << it -> getTransactionMaker();
-            if (it-> getType() == DEPOSIT){
-                report << " Deposited ";
-            }
-            else if (it->getType() == WITHDRAW){
-                report << " Withdrawn ";
-            }
-            report << it -> getValue() << "$" << std:: endl;
-            report << "CAUSE: "<< it -> getCause() << std:: endl;
+        report << "DEPOSITS:" << std:: endl;
+        for (const auto & it : iter->getDepositTransactions()){
+            report << std:: asctime (it .getDateAndTime()) << it . getTransactionMaker();
+            report << " Deposited ";
+            report << it . getValue() << "$" << std:: endl;
+            report << "CAUSE: "<< it . getCause() << std:: endl;
         }
-
+        report << "WITHDRAWS:" << std:: endl;
+        for (const auto & it : iter->getWithdrawTransactions()){
+            report << std:: asctime (it .getDateAndTime()) << it . getTransactionMaker();
+            report << " Withdrawn ";
+            report << it . getValue() << "$" << std:: endl;
+            report << "CAUSE: "<< it . getCause() << std:: endl;
+        }
         i++;
     }
 }
@@ -99,5 +152,33 @@ void User::clearFile(const std::string &fileName) {
     toClear.open(fileName, std:: fstream::out | std:: fstream::trunc); //trunc deletes any contents that existed in the file before it is open
     toClear.close();
 }
+
+bool User::moveTransaction(int transactionIndex, int accountIndex) {
+    try{
+        Transaction tmp = this -> accounts.at(activeAccount)->removeTransaction(transactionIndex);
+        this -> accounts.at(accountIndex-1)->addTransaction(tmp);
+    }
+    catch (std:: out_of_range &e){
+        std:: cout << e.what() << std:: endl;
+        return false;
+    }
+    return true;
+}
+
+void User::addTransaction(const Transaction &toAdd) {
+    this -> accounts.at(activeAccount)->addTransaction(toAdd);
+}
+
+bool User::removeTransaction(int index) {
+    try{
+        this -> accounts.at(activeAccount)->removeTransaction(index);
+    }
+    catch (std:: out_of_range & e){
+        std:: cout << e.what() << std:: endl;
+        return false;
+    }
+    return true;
+}
+
 
 

@@ -131,31 +131,44 @@ CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/ReworkedBankAccount/Interface.cpp -o CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.s
 
-CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o: CMakeFiles/ReworkedBankAccount.dir/flags.make
-CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o: ../testBankAccount.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o -c /home/sergio/ReworkedBankAccount/testBankAccount.cpp
+CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o: CMakeFiles/ReworkedBankAccount.dir/flags.make
+CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o: ../Tests/testBankAccount.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o -c /home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp
 
-CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/ReworkedBankAccount/testBankAccount.cpp > CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.i
+CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp > CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.i
 
-CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/ReworkedBankAccount/testBankAccount.cpp -o CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.s
+CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp -o CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.s
 
-CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o: CMakeFiles/ReworkedBankAccount.dir/flags.make
-CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o: ../testUser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o -c /home/sergio/ReworkedBankAccount/testUser.cpp
+CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o: CMakeFiles/ReworkedBankAccount.dir/flags.make
+CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o: ../Tests/testUser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o -c /home/sergio/ReworkedBankAccount/Tests/testUser.cpp
 
-CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/ReworkedBankAccount/testUser.cpp > CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.i
+CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/ReworkedBankAccount/Tests/testUser.cpp > CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.i
 
-CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/ReworkedBankAccount/testUser.cpp -o CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.s
+CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/ReworkedBankAccount/Tests/testUser.cpp -o CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.s
+
+CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o: CMakeFiles/ReworkedBankAccount.dir/flags.make
+CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o: ../Tests/testTransaction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o -c /home/sergio/ReworkedBankAccount/Tests/testTransaction.cpp
+
+CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/ReworkedBankAccount/Tests/testTransaction.cpp > CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.i
+
+CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/ReworkedBankAccount/Tests/testTransaction.cpp -o CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.s
 
 # Object files for target ReworkedBankAccount
 ReworkedBankAccount_OBJECTS = \
@@ -164,8 +177,9 @@ ReworkedBankAccount_OBJECTS = \
 "CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.o" \
 "CMakeFiles/ReworkedBankAccount.dir/User.cpp.o" \
 "CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.o" \
-"CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o" \
-"CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o"
+"CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o" \
+"CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o" \
+"CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o"
 
 # External object files for target ReworkedBankAccount
 ReworkedBankAccount_EXTERNAL_OBJECTS =
@@ -175,14 +189,15 @@ ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/Transaction.cpp.o
 ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/BankAccount.cpp.o
 ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/User.cpp.o
 ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/Interface.cpp.o
-ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/testBankAccount.cpp.o
-ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/testUser.cpp.o
+ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/Tests/testBankAccount.cpp.o
+ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/Tests/testUser.cpp.o
+ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/Tests/testTransaction.cpp.o
 ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/build.make
 ReworkedBankAccount: lib/libgtestd.a
 ReworkedBankAccount: lib/libgtest_maind.a
 ReworkedBankAccount: lib/libgtestd.a
 ReworkedBankAccount: CMakeFiles/ReworkedBankAccount.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ReworkedBankAccount"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergio/ReworkedBankAccount/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ReworkedBankAccount"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ReworkedBankAccount.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

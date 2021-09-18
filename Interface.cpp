@@ -35,7 +35,7 @@ bool Interface::startInterface() {
                 createBankAccount();
         }
         printTextOptions();//options available to the user
-        while (!(getIntInput(input, 6))); //gets input
+        while (!(getIntInput(input, 7))); //gets input
         switch (input){
             case 1 : { //deposit option
                 std:: cout << "Choose the amount you want to deposit, press (0) to cancel operation" << std:: endl;
@@ -70,19 +70,54 @@ bool Interface::startInterface() {
 
                 break;
             }
-            case 3: { //prints user details
+            case 3: {
+                if (user -> getAccounts().at (user -> getActiveAccount())->getBalance() > 0){
+                    if (user -> getAccounts().size() > 1){
+                        int dest;
+                        user->printAccounts();
+                        std:: cout << "Choose the destination account: ";
+                        do {
+                            while (!(getIntInput(dest)));
+                            if (dest - 1 == user-> getActiveAccount())
+                                std:: cout << "Destination and source cannot be the same account, please select a valid account"<< std:: endl;
+                        }
+                        while (dest - 1 == user ->getActiveAccount() );
+
+                        std:: cout << "Choose the amount you want to transfer, press (0) to cancel operation" << std:: endl;
+                        std:: string cause;
+                        do{
+                            while (!(getIntInput(input)));
+                            std:: cout << "Please insert a cause for your operation: "<< std:: endl;
+                            while (!getStringInput(cause)); //keeps asking for a cause until a valid one is input
+                            if (input == 0)
+                                break;
+                        }while (!(user->transfer(dest,input,cause)));
+                        if (input > 0)
+                            std:: cout << "Transferred " << input << "$" << " to " << user-> getAccounts().at(dest - 1)->getName() <<std:: endl;
+                    }
+                    else{
+                        std:: cout << "You only have 1 account, to transfer money create another account!" << std:: endl;
+                    }
+                }
+                else {
+                    std:: cout << "Your balance is 0!" << std:: endl;
+                }
+                break;
+            }
+            case 4: { //prints user details
                 user ->printUserDetails();
                 break;
             }
-            case 4: { //print all account history option
+            case 5: { //print all account history option
                 std:: cout << "WITHDRAWS:" << std:: endl;
                 user->printWithdrawHistory();
                 std:: cout << "DEPOSITS:" << std:: endl;
                 user-> printDepositHistory();
+
                 std:: cout << std:: endl;
                 break;
             }
-            case 5 : { //allows user to set a different account as active
+            case 6 : { //allows user to set a different account as active
                 user->printAccounts();
                 std:: cout << "Select the number of the account you want to set active, press (0) to exit" << std:: endl;
                 while (!(getIntInput(input,user -> getAccounts().size() ))); //takes an int to evaluate the choice
@@ -90,7 +125,7 @@ bool Interface::startInterface() {
                     user ->switchAccount(input);
                 break;
             }
-            case 6 : { //allows User to create another bank account
+            case 7 : { //allows User to create another bank account
                 createBankAccount();
                 break;
             }
@@ -158,10 +193,11 @@ void Interface ::printTextOptions() { //prints the interface options
     std:: cout << " - BALANCE: "<< user ->  getAccounts().at(user ->getActiveAccount())->getBalance() << "$"<< std:: endl;
     std:: cout << "Press (1) to deposit cash" << std:: endl;
     std:: cout << "Press (2) to withdraw cash" << std:: endl;
-    std:: cout << "Press (3) to check your User information" << std:: endl;
-    std:: cout << "Press (4) to check your account transactions history " << std:: endl;
-    std:: cout << "Press (5) to change active account" << std:: endl;
-    std:: cout << "Press (6) to create another bank account" << std:: endl;
+    std:: cout << "Press (3) to transfer cash to a different account" << std:: endl;
+    std:: cout << "Press (4) to check your User information" << std:: endl;
+    std:: cout << "Press (5) to check your account transactions history " << std:: endl;
+    std:: cout << "Press (6) to change active account" << std:: endl;
+    std:: cout << "Press (7) to create another bank account" << std:: endl;
     std:: cout << "Press (0) to quit and view session log" << std:: endl;
 }
 void Interface ::createBankAccount() {

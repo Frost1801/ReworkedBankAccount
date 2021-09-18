@@ -18,12 +18,12 @@ public:
     Transaction (int value, int type , std:: string transactionMaker, std:: string cause) :
     value(value), cause (std::move(cause)), transactionMaker(std::move(transactionMaker)), type (type){
         std::time_t t = std::time(nullptr);   // gets time of now
-        dateAndTime = localtime(&t);
+        dateAndTime = ctime(&t);
     }
     //overloaded constructor to allow creation with a date as input
     Transaction (int value, int type , std:: string transactionMaker, std:: string cause, std:: tm *toSet) :
             value(value), cause (std::move(cause)), transactionMaker(std::move(transactionMaker)), type (type){
-            dateAndTime = toSet;
+            dateAndTime = std::asctime(toSet);
     }
 
     //overloaded == operator to compare two Transactions
@@ -39,9 +39,11 @@ public:
     //getters
     [[nodiscard]] int getValue() const;
     [[nodiscard]] int getType() const;
-    [[nodiscard]] std:: tm *getDateAndTime() const;
+    [[nodiscard]] const std::string &getDateAndTime() const;
     [[nodiscard]] const std::string &getCause() const;
     [[nodiscard]] const std::string &getTransactionMaker() const;
+
+
 
 
     //setters
@@ -50,7 +52,7 @@ public:
 private:
     int value;
     int type;
-    std:: tm * dateAndTime; //date adn time represented as a tm struct from ctime
+    std:: string dateAndTime;
     std:: string cause;
     std:: string transactionMaker;
 };

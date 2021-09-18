@@ -21,10 +21,10 @@ const std::string &Transaction::getTransactionMaker() const {
 }
 
 void Transaction::setDateAndTime(std::tm *toSet) {
-    dateAndTime = toSet;
+    dateAndTime = std:: asctime (toSet);
 }
 
-std:: tm *Transaction::getDateAndTime() const {
+const std::string &Transaction::getDateAndTime() const {
     return dateAndTime;
 }
 

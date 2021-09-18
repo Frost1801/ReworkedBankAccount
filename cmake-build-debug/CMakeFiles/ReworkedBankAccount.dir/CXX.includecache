@@ -528,10 +528,6 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/sergio/ReworkedBankAccount/BankAccount.cpp
-BankAccount.h
-/home/sergio/ReworkedBankAccount/BankAccount.h
-
 /home/sergio/ReworkedBankAccount/BankAccount.h
 vector
 -
@@ -540,28 +536,8 @@ memory
 Transaction.h
 /home/sergio/ReworkedBankAccount/Transaction.h
 
-/home/sergio/ReworkedBankAccount/Interface.cpp
-Interface.h
-/home/sergio/ReworkedBankAccount/Interface.h
-
 /home/sergio/ReworkedBankAccount/Interface.h
 User.h
-/home/sergio/ReworkedBankAccount/User.h
-
-/home/sergio/ReworkedBankAccount/Tests/testBankAccount.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-../BankAccount.h
-/home/sergio/ReworkedBankAccount/BankAccount.h
-
-/home/sergio/ReworkedBankAccount/Tests/testUser.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-../User.h
 /home/sergio/ReworkedBankAccount/User.h
 
 /home/sergio/ReworkedBankAccount/Transaction.h
@@ -573,10 +549,6 @@ utility
 -
 fstream
 -
-
-/home/sergio/ReworkedBankAccount/User.cpp
-User.h
-/home/sergio/ReworkedBankAccount/User.h
 
 /home/sergio/ReworkedBankAccount/User.h
 BankAccount.h

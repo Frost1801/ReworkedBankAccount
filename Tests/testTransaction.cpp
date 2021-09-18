@@ -30,10 +30,10 @@ public:
 TEST_F(TesterTransaction, constructorTimeSet){
     std:: unique_ptr <std:: tm> date = createDate();
     std:: unique_ptr<Transaction> tested = std::make_unique<Transaction>(0,DEPOSIT,"testUser","testCause",date.get());
-    ASSERT_TRUE(Transaction :: areEqualDates(date.get(),tested->getDateAndTime()));
+   ASSERT_EQ(std:: asctime (date.get()),tested->getDateAndTime());
 }
 TEST_F(TesterTransaction, manualTimeSet){
     std:: unique_ptr <std:: tm> date = createDate();
     tested ->setDateAndTime(date.get());
-    ASSERT_TRUE(Transaction :: areEqualDates(date.get(),tested->getDateAndTime()));
+    ASSERT_EQ(std:: asctime (date.get()),tested->getDateAndTime());
 }

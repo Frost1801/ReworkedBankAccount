@@ -23,7 +23,7 @@ public:
     [[nodiscard]] std:: vector <Transaction> getDepositTransactions () const;
     [[nodiscard]] std:: vector <Transaction> getWithdrawTransactions () const;
     [[nodiscard]] std:: vector <Transaction> getOfDateTransactions (std:: tm * dateAndTime) const;
-
+    
 
 
     [[nodiscard]] int getBalance() const;

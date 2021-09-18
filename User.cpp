@@ -10,7 +10,7 @@ User::~User() {
 }
 
 void User::printIndividualTransaction(const Transaction &it) const {
-    std:: cout << std:: asctime (it .getDateAndTime())  << it . getTransactionMaker();
+    std:: cout << it .getDateAndTime()  << it . getTransactionMaker();
     if (it.getType() == DEPOSIT){
         std:: cout << " Deposited ";
     }
@@ -22,27 +22,25 @@ void User::printIndividualTransaction(const Transaction &it) const {
 }
 
 void User::printDepositHistory() const { //prints all the transactions of the active account
-    for (const auto & it : accounts){
-        std:: vector<Transaction> deposits = it -> getDepositTransactions ();
-        for (const auto & iter : deposits)
-            printIndividualTransaction((iter));
-    }
+        std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getDepositTransactions();
+/*        for (const auto & iter : deposits)
+            printIndividualTransaction((iter));*/
+        for  (int i = 0; i < deposits.size(); i++)
+            printIndividualTransaction(deposits.at(i));
 }
 
 void User::printWithdrawHistory() const { //prints all the transactions of the active account
-    for (const auto & it : accounts){
-        std:: vector<Transaction> deposits = it -> getWithdrawTransactions();
+    std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getWithdrawTransactions();
         for (const auto & iter : deposits)
             printIndividualTransaction((iter));
-    }
+
 }
 
 void User::printTransactionOfDate(std::tm *dateOfTransaction) const {
-    for (const auto & it : accounts){
-        std:: vector<Transaction> deposits = it -> getOfDateTransactions(dateOfTransaction);
+    std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getOfDateTransactions(dateOfTransaction);
         for (const auto & iter : deposits)
             printIndividualTransaction((iter));
-    }
+
 }
 
 void User::printUserDetails() const { //prints user details to screen
@@ -95,14 +93,14 @@ void User::generateReport() const { //generates a report of the user activity on
         report << " - BALANCE: " << accounts.at(i - 1)->getBalance() << "$"<< std:: endl;
         report << "DEPOSITS:" << std:: endl;
         for (const auto & it : iter->getDepositTransactions()){
-            report << std:: asctime (it .getDateAndTime()) << it . getTransactionMaker();
+            report << it .getDateAndTime()<< it . getTransactionMaker();
             report << " Deposited ";
             report << it . getValue() << "$" << std:: endl;
             report << "CAUSE: "<< it . getCause() << std:: endl;
         }
         report << "WITHDRAWS:" << std:: endl;
         for (const auto & it : iter->getWithdrawTransactions()){
-            report << std:: asctime (it .getDateAndTime()) << it . getTransactionMaker();
+            report << it .getDateAndTime() << it . getTransactionMaker();
             report << " Withdrawn ";
             report << it . getValue() << "$" << std:: endl;
             report << "CAUSE: "<< it . getCause() << std:: endl;

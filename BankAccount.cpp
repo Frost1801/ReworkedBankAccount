@@ -51,7 +51,7 @@ std::vector<Transaction> BankAccount::getWithdrawTransactions() const {
 std::vector<Transaction> BankAccount::getOfDateTransactions(std::tm *dateAndTime) const {
     std:: vector<Transaction> toReturn;
     for (const auto & it : transactionHistory){
-        if (Transaction::areEqualDates(dateAndTime,it->getDateAndTime()))
+        if (std:: asctime(dateAndTime) == it->getDateAndTime())
             toReturn.push_back(*(it));
     }
     return toReturn;

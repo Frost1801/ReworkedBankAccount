@@ -83,7 +83,7 @@ TEST_F (TesterBankAccount, datedTransactionHistory){ //creates a date and checks
     Transaction mustBeEqual (100,WITHDRAW, "test", "test cause",dateAndTime.get()); //creates a transaction with a set date
     tested->addTransaction(mustBeEqual);
     std:: vector <Transaction> ofDate = tested ->getOfDateTransactions(dateAndTime.get());
-    ASSERT_TRUE(Transaction:: areEqualDates(ofDate.at(ofDate.size()-1).getDateAndTime(),dateAndTime.get()));
+   ASSERT_EQ(ofDate.at(ofDate.size()-1).getDateAndTime(),std:: asctime(dateAndTime.get()));
 }
 TEST_F (TesterBankAccount, addRemoveTransactionTest){ //checks if adding and removing transactions works
     std:: unique_ptr <std:: tm> dateAndTime = createDate();

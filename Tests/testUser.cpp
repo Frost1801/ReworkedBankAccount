@@ -38,7 +38,7 @@ TEST_F(TesterUser, addAccountTest){
     ASSERT_EQ (tested-> getAccounts().size(), 1);
 }
 
-TEST_F(TesterUser, transferTest){ //checks if money is transferred successfully
+TEST_F(TesterUser, transferValidTest){ //checks if money is transferred successfully
     tested ->addAccount("account1");
     tested ->addAccount("account2");
     tested->getAccounts().at(0)->deposit(100,"testName","testCause");
@@ -46,6 +46,32 @@ TEST_F(TesterUser, transferTest){ //checks if money is transferred successfully
     ASSERT_EQ(0,tested->getAccounts().at(0)->getBalance());
     ASSERT_EQ(100,tested->getAccounts().at(1)->getBalance());
 }
+
+TEST_F(TesterUser, transferInvalidTest){ //checks if transfer fails or not with input bigger than balance
+    tested ->addAccount("account1");
+    tested ->addAccount("account2");
+    tested->getAccounts().at(0)->deposit(100,"testName","testCause");
+    tested->transfer(2,101,"transfer");
+    ASSERT_EQ(100,tested->getAccounts().at(0)->getBalance());
+    ASSERT_EQ(0,tested->getAccounts().at(1)->getBalance());
+}
+
+TEST_F(TesterUser, transferReturnTrue){ //checks if transfer return true on a success
+    tested ->addAccount("account1");
+    tested ->addAccount("account2");
+    tested->getAccounts().at(0)->deposit(100,"testName","testCause");
+    bool outcome = tested->transfer(2,100,"transfer");
+    ASSERT_TRUE(outcome);
+}
+
+TEST_F(TesterUser, transferReturnFalse){ //checks if transfer return false on a failure
+    tested ->addAccount("account1");
+    tested ->addAccount("account2");
+    tested->getAccounts().at(0)->deposit(100,"testName","testCause");
+    bool outcome = tested->transfer(2,101,"transfer");
+    ASSERT_FALSE(outcome);
+}
+
 TEST_F(TesterUser, moveTransactionTest){ //checks if transaction is moved successfully
     Transaction t1 (100,DEPOSIT,"testUser","testCause");
     tested ->addAccount("account1");

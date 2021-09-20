@@ -22,24 +22,24 @@ void User::printIndividualTransaction(const Transaction &it) const {
 }
 
 void User::printDepositHistory() const { //prints all the transactions of the active account
-        std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getDepositTransactions();
+    std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getDepositTransactions();
 /*        for (const auto & iter : deposits)
             printIndividualTransaction((iter));*/
-        for  (int i = 0; i < deposits.size(); i++)
-            printIndividualTransaction(deposits.at(i));
+    for  (int i = 0; i < deposits.size(); i++)
+        printIndividualTransaction(deposits.at(i));
 }
 
 void User::printWithdrawHistory() const { //prints all the transactions of the active account
     std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getWithdrawTransactions();
-        for (const auto & iter : deposits)
-            printIndividualTransaction((iter));
+    for (const auto & iter : deposits)
+        printIndividualTransaction((iter));
 
 }
 
 void User::printTransactionOfDate(std::tm *dateOfTransaction) const {
     std:: vector<Transaction> deposits = accounts.at(activeAccount)-> getOfDateTransactions(dateOfTransaction);
-        for (const auto & iter : deposits)
-            printIndividualTransaction((iter));
+    for (const auto & iter : deposits)
+        printIndividualTransaction((iter));
 
 }
 
@@ -51,12 +51,12 @@ void User::printUserDetails() const { //prints user details to screen
 }
 
 void User::deposit(int depositValue, const std::string &cause) {
-    this -> accounts.at(activeAccount)->deposit(depositValue,this ->fullName,cause);
+    accounts.at(activeAccount)->deposit(depositValue,fullName,cause);
 }
 
 bool User::withdraw(int depositValue, const std::string &cause) {
     try{
-        this -> accounts.at(activeAccount)->withdraw(depositValue,this ->fullName,cause);
+        accounts.at(activeAccount)->withdraw(depositValue,fullName,cause);
     }
     catch (std:: runtime_error & e){
         std :: cout << e.what() << std:: endl;
@@ -67,13 +67,13 @@ bool User::withdraw(int depositValue, const std::string &cause) {
 
 bool User::transfer(int dest, int value, const std::string &cause) {
     try{
-        this -> accounts.at(activeAccount)->withdraw(value,this ->fullName,cause);
+        accounts.at(activeAccount)->withdraw(value,fullName,cause);
     }
     catch (std:: runtime_error & e){
         std :: cout << e.what() << std:: endl;
         return false;
     }
-    this -> accounts.at(dest - 1)->deposit(value,this ->fullName,cause);
+    accounts.at(dest - 1)->deposit(value,fullName,cause);
     return true;
 }
 
@@ -153,8 +153,8 @@ void User::clearFile(const std::string &fileName) {
 
 bool User::moveTransaction(int transactionIndex, int accountIndex) {
     try{
-        Transaction tmp = this -> accounts.at(activeAccount)->removeTransaction(transactionIndex);
-        this -> accounts.at(accountIndex-1)->addTransaction(tmp);
+        Transaction tmp = accounts.at(activeAccount)->removeTransaction(transactionIndex);
+        accounts.at(accountIndex-1)->addTransaction(tmp);
     }
     catch (std:: out_of_range &e){
         std:: cout << e.what() << std:: endl;
@@ -164,12 +164,12 @@ bool User::moveTransaction(int transactionIndex, int accountIndex) {
 }
 
 void User::addTransaction(const Transaction &toAdd) {
-    this -> accounts.at(activeAccount)->addTransaction(toAdd);
+    accounts.at(activeAccount)->addTransaction(toAdd);
 }
 
 bool User::removeTransaction(int index) {
     try{
-        this -> accounts.at(activeAccount)->removeTransaction(index);
+        accounts.at(activeAccount)->removeTransaction(index);
     }
     catch (std:: out_of_range & e){
         std:: cout << e.what() << std:: endl;

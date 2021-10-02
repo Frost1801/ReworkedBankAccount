@@ -166,12 +166,18 @@ bool Interface ::getIntInput(int &input, int maxVal, int minVal) {//takes an int
     //performs various checks on the int, returns true if it passes, false otherwise
     try {
         std:: cin >> input;
-        if (input < minVal)
-            throw std:: out_of_range ("Input is smaller than minimum accepted value (" + std::to_string(minVal) +")");
-        if (input > maxVal)
-            throw std:: out_of_range ("Input exceeds the maximum number (" + std::to_string(maxVal) +")");
-        if (input == 0)
-            return true;
+        if (std:: cin.good()){
+            if (input < minVal)
+                throw std:: out_of_range ("Input is smaller than minimum accepted value (" + std::to_string(minVal) +")");
+            if (input > maxVal)
+                throw std:: out_of_range ("Input exceeds the maximum number (" + std::to_string(maxVal) +")");
+            if (input == 0)
+                return true;
+        }
+        else {
+            throw std:: out_of_range ("Invalid input, please try again");
+        }
+
     }
     catch (const std:: out_of_range &e){
         std:: cout << e.what() << std:: endl;
